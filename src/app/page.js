@@ -27,7 +27,7 @@ export default function Portfolio() {
           {/* Profile Image */}
           <div className="w-40 h-40 relative rounded-lg overflow-hidden flex-shrink-0">
             <Image
-              src="/JSH0905.github.io/profile.jpg"
+              src="/profileImage.jpeg"
               alt="Profile"
               fill
               className="object-cover"
