@@ -1,3 +1,4 @@
+//page.js
 "use client";
 
 import React from "react";
@@ -11,11 +12,11 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import ProjectCard from "./components/ProjectCard";
-import SkillCard from "./components/SkillCard";
-import EducationCard from "./components/EducationCard";
-import CertificateCard from "./components/CertificateCard";
-import AwardCard from "./components/AwardCard";
+import ProjectCard from "@/components/ProjectCard";
+import SkillCard from "@/components/SkillCard";
+import EducationCard from "@/components/EducationCard";
+import CertificateCard from "@/components/CertificateCard";
+import AwardCard from "@/components/AwardCard";
 
 export default function Portfolio() {
   return (
@@ -26,7 +27,7 @@ export default function Portfolio() {
           {/* Profile Image */}
           <div className="w-40 h-40 relative rounded-lg overflow-hidden flex-shrink-0">
             <Image
-              src="/profile.jpg"
+              src="/JSH0905.github.io/profile.jpg"
               alt="Profile"
               fill
               className="object-cover"

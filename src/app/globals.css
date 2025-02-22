@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* 기본 스타일 추가 */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: white;
+}
