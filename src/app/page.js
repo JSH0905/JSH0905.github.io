@@ -30,15 +30,15 @@ export default function Portfolio() {
     <div className="flex flex-col min-h-screen bg-white">
       <div className="flex flex-1">
         <Navigation />
-        <main className="flex items-center justify-center flex-1 p-8">
+        <main className="flex items-center justify-center flex-1 w-full p-4 md:p-8 md:ml-64">
           <div className="w-full max-w-4xl space-y-12">
             {/* Header Section */}
             <header className="space-y-8">
-              <div className="flex items-start gap-8">
+              <div className="flex flex-col gap-8 md:flex-row md:items-start">
                 {/* Profile Image */}
-                <div className="relative flex-shrink-0 w-40 h-40 overflow-hidden rounded-lg">
+                <div className="relative flex-shrink-0 w-40 mx-auto overflow-hidden rounded-lg h-52 md:mx-0">
                   <Image
-                    src="assets/profileImage.jpeg"
+                    src="assets/profileImage.jpg"
                     alt="Profile"
                     fill
                     className="object-cover"
@@ -46,35 +46,39 @@ export default function Portfolio() {
                   />
                 </div>
 
-                <div className="flex-grow space-y-4">
-                  <div>
-                    <h1 className="text-4xl font-bold">정성훈</h1>
-                  </div>
+                <div className="flex-grow mt-4 space-y-4 md:mt-0">
+                  <div className="flex-col justify-between">
+                    <div>
+                      <h1 className="text-4xl font-bold text-center md:text-left">
+                        정성훈
+                      </h1>
+                    </div>
 
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2 text-gray-600">
-                      <Mail className="w-4 h-4" />
-                      <span>2000tjdgns@naver.com</span>
+                    <div className="mt-16 space-y-2">
+                      <div className="flex items-center gap-2 text-gray-600">
+                        <Mail className="w-4 h-4" />
+                        <span>2000tjdgns@naver.com</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-gray-600">
+                        <Phone className="w-4 h-4" />
+                        <span>010-6209-6156</span>
+                      </div>
+                      <Link
+                        href="https://github.com/JSH0905"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-gray-600 hover:text-blue-600"
+                      >
+                        <Image
+                          src="assets/github-mark.svg"
+                          alt="GitHub"
+                          width={16}
+                          height={16}
+                          className="w-4 h-4"
+                        />
+                        <span>GitHub</span>
+                      </Link>
                     </div>
-                    <div className="flex items-center gap-2 text-gray-600">
-                      <Phone className="w-4 h-4" />
-                      <span>010-6209-6156</span>
-                    </div>
-                    <Link
-                      href="https://github.com/JSH0905"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-gray-600 hover:text-blue-600"
-                    >
-                      <Image
-                        src="assets/github-mark.svg" // public 폴더에 있는 SVG 경로
-                        alt="GitHub"
-                        width={16} // 원하는 width 크기
-                        height={16} // 원하는 height 크기
-                        className="w-4 h-4"
-                      />
-                      <span>GitHub</span>
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -359,7 +363,7 @@ export default function Portfolio() {
           </div>
         </main>
       </div>
-      <div className="left-0 right-0 z-10 w-full">
+      <div className="left-0 right-0 z-50 w-full">
         <Footer />
       </div>
     </div>

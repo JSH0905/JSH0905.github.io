@@ -14,12 +14,6 @@ const ProjectCard = ({
   repositories,
   onShowDetail,
 }) => {
-  // Skills를 7개씩 그룹으로 나누기
-  const skillGroups = [];
-  for (let i = 0; i < skills.length; i += 7) {
-    skillGroups.push(skills.slice(i, i + 7));
-  }
-
   return (
     <div className="p-6 space-y-4 rounded-lg shadow-sm bg-gray-50">
       <div className="flex items-start justify-between">
@@ -57,52 +51,44 @@ const ProjectCard = ({
           </div>
         )}
 
-        {/* Skills 그룹별로 렌더링 (7개씩) */}
-        <div className="space-y-2">
-          {skillGroups.map((group, groupIndex) => (
-            <div key={groupIndex} className="flex flex-wrap gap-2">
-              {group.map((skill, index) => (
-                <span
-                  key={index}
-                  className="px-3 py-1 text-sm text-blue-800 bg-blue-100 rounded-full shrink-0"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
+        {/* 레포지토리 링크를 위로 이동하고 간격 늘림 (mt-6 추가) */}
+        <div className="flex flex-wrap items-center gap-4 pt-8">
+          <div className="pl-2">
+            <p>[README 및 소스코드]</p>
+          </div>
+
+          {(repositories || []).map((repository, index) => (
+            <Link
+              key={index}
+              href={repository.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-gray-600 hover:text-blue-600"
+            >
+              <Image
+                src="assets/github-mark.svg"
+                alt="GitHub"
+                width={16}
+                height={16}
+                className="w-4 h-4"
+              />{" "}
+              {repository.name}
+            </Link>
           ))}
         </div>
 
-        {/* Repositories + 자세히 보기 버튼을 같은 줄에 배치 (아래쪽) */}
-        <div className="flex items-center gap-4">
-          <div className="flex items-center gap-4">
-            {(repositories || []).map((repository, index) => (
-              <Link
+        {/* 스킬 목록을 아래로 이동하고 자연스럽게 줄바꿈되도록 수정 */}
+        <div>
+          <div className="flex flex-wrap gap-2">
+            {skills.map((skill, index) => (
+              <span
                 key={index}
-                href={repository.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-gray-600 hover:text-blue-600"
+                className="px-3 py-1 text-sm text-blue-800 bg-blue-100 rounded-full"
               >
-                <Image
-                  src="assets/github-mark.svg" // public 폴더에 있는 SVG 경로
-                  alt="GitHub"
-                  width={16} // 원하는 width 크기
-                  height={16} // 원하는 height 크기
-                  className="w-4 h-4"
-                />{" "}
-                {repository.name}
-              </Link>
+                {skill}
+              </span>
             ))}
           </div>
-
-          {/* 버튼을 오른쪽으로 정렬 */}
-          <button
-            onClick={onShowDetail}
-            className="px-4 py-2 ml-auto text-white transition-colors bg-blue-600 rounded-lg hover:bg-blue-700"
-          >
-            자세히 보기
-          </button>
         </div>
       </div>
     </div>

@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="container max-w-4xl px-4 mx-auto text-center">
         <div className="flex flex-col items-center justify-center space-y-2">
           <p className="text-sm text-gray-600">
-            © {currentYear} 정성훈 포트폴리오. 모든 권리 보유.
+            © {currentYear} 정성훈 포트폴리오
           </p>
           <p className="text-xs text-gray-500">
             본 포트폴리오는 상업적 목적으로 사용되지 않으며, 개인 역량 소개를
