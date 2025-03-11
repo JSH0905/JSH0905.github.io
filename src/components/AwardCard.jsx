@@ -11,12 +11,12 @@ const AwardCard = ({
     <div className="flex items-start justify-between mb-2">
       <div>
         <h3 className="font-semibold text-blue-800">{title}</h3>
-        {organizer && <p className="text-gray-600">주최: {organizer}</p>}
+        {organizer && <p className="text-gray-600">수여 기관: {organizer}</p>}
       </div>
       <span className="text-gray-500">{date}</span>
     </div>
     <div className="flex-col items-center gap-2">
-      <p className="text-gray-600">{description}</p>
+      <p className="text-gray-600">출품작 : {description}</p>
       {sub_description && (
         <Link
           href={sub_description}

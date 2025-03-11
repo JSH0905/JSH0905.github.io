@@ -98,8 +98,9 @@ export default function Portfolio() {
                     그럴때마다 다양한 정보를 수집하고, 다른 사람이 작성한 코드를
                     작성한 코드를 그대로 가져다 쓰는 것이 아닌 코드를 분석하고
                     동작 원리를 파악하려고 시도합니다. 때로는 그 과정이
-                    고통스럽지만 차근차근 하나씩 공부하며 제 코드에 적용하고
-                    결국 문제를 해결하면 그것만한 쾌감이 없다고 생각합니다.
+                    고통스럽지만 차근차근 하나씩 공부하며 제 코드에 알맞게
+                    적용하고 결국 문제를 해결하면 그것만한 쾌감이 없다고
+                    생각합니다.
                   </p>
                 </div>
 
@@ -239,7 +240,7 @@ export default function Portfolio() {
               </div>
             </section>
 
-            {/* Side Projects Section */}
+            {/* Side Projects Section
             <section id="sideProjects" className="space-y-8">
               <h2 className="pb-2 text-2xl font-bold border-b">
                 사이드 프로젝트
@@ -266,7 +267,7 @@ export default function Portfolio() {
                   ]}
                 />
               </div>
-            </section>
+            </section> */}
 
             {/* Technical Skills Section */}
             <section id="skills" className="space-y-6">
@@ -275,12 +276,12 @@ export default function Portfolio() {
                 <SkillCard
                   title="Backend"
                   icon={<Terminal className="w-5 h-5 text-blue-600" />}
-                  skills={["Java", "Spring Boot", "Node.js", "Python"]}
+                  skills={["Java", "Spring Boot"]}
                 />
                 <SkillCard
                   title="Database"
                   icon={<Database className="w-5 h-5 text-green-600" />}
-                  skills={["MySQL", "MSSQL", "Redis", "Firebase"]}
+                  skills={["MySQL", "MSSQL", "Redis"]}
                 />
                 <SkillCard
                   title="DevOps / Cloud"
@@ -292,12 +293,13 @@ export default function Portfolio() {
                     "ELB",
                     "CodeDeploy",
                     "Docker",
+                    "FCM",
                   ]}
                 />
                 <SkillCard
                   title="Tools"
                   icon={<Code2 className="w-5 h-5 text-orange-600" />}
-                  skills={["Git", "Github", "Figma", "Notion"]}
+                  skills={["Git", "Github", "Figma", "Notion", "Swagger"]}
                 />
               </div>
             </section>
