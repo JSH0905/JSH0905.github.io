@@ -164,7 +164,7 @@ export default function Portfolio() {
                       name: "거북이 놀이터",
                     },
                     {
-                      url: "https://github.com/Team-MansuMugang",
+                      url: "https://github.com/Team-Turtle-Minecraft/Turtle-Playground-Frontend",
                       name: "거북이 놀이터 프론트엔드 ",
                     },
                     {
