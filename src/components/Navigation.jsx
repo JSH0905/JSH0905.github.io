@@ -7,7 +7,6 @@ import { Menu, X } from "lucide-react";
 const menuItems = [
   { id: "about", label: "자기소개" },
   { id: "mainProjects", label: "주요 프로젝트" },
-  { id: "sideProjects", label: "사이드 프로젝트" },
   { id: "skills", label: "기술 스택" },
   { id: "certificates", label: "자격증" },
   { id: "awards", label: "수상 경력" },
